@@ -121,7 +121,7 @@ plt.savefig("v_zonal_anomaly.png")
 
 fig,ax=plt.subplots(1,1)
 
-c = ax.contour(x_lat,y_lev,omega_zonal_mean,colors='k',linewidths=1)
+c = ax.contour(x_lat,y_lev,omega_zonal_mean,colors='k',linewidths=1, levels=np.linspace(-0.02,0.02,8))
 cf = ax.contourf(x_lat, y_lev, omega_zonal_nino_mean - omega_zonal_mean,
               cmap='seismic', levels=np.linspace(-0.0025,0.0025,12))
 ax.clabel(c, inline=True, fontsize=10)
